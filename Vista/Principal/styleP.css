@@ -1,0 +1,194 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado superior */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Servicio al cliente a la izquierda */
+.header-left {
+    flex: 1;
+}
+
+/* Logo centrado */
+.header-center {
+    flex: 1;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Área de inicio de sesión y carrito a la derecha */
+.header-right {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenedor del menú y barra de búsqueda */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+}
+
+.menu a {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    flex-shrink: 0;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    width: 80%;
+    height:600px;
+    /*background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #555;*/
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+
+}
+section img:hover{
+    cursor: crosshair;
+    width: 30%;
+    opacity: 1;
+    filter: contrast(120%);
+
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Usa la fuente elegida */
+    font-size: 32px; /* Ajusta el tamaño según sea necesario */
+    color: #333; /* Cambia el color si lo deseas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0px 70% 0px 0px; /* Margen: arriba, derecha, abajo, izquierda */
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    gap: 15px; /* espacio entre los productos */
+    width: 80%;
+ }
+ .product {
+    position: relative;
+    width: 125%; /* para la separacion si lo para la pagina */
+    
+ }
+ 
+ .product img{
+    object-fit: cover;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #555;
+    border-radius: 6px;
+    width: 80%;
+    transition:0.6s;
+    aspect-ratio: 1 / 1; /* hace que cada cuadro sea cuadrado */
+ }
+    .product #img2{
+ margin-top: -80%;
+ 
+ }
+    h3{
+        font-family:cursive;
+         color: #333; /* Cambia el color del texto según desees */
+        }
+
+    h4{
+        font-family:cursive;
+        color: #333; /* Cambia el color del texto según desees */
+    }
+    
+    .product #img2:hover{
+        opacity:0;
+        cursor:pointer;
+        box-shadow: 0px 15px 25px;
+        
+    }
+
+
+
+

@@ -232,13 +232,13 @@ session_start();
             };
 
             try {
-                const response = await fetch('../../Controlador/api/login.php', {
+                const response = await fetch('../../api/login.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data)
-                });s
+                });
 
                 const result = await response.json();
 
@@ -250,11 +250,12 @@ session_start();
                     alert(result.message || 'Error en el login');
                 }
             } catch (error) {
-                alert('Error al conectar con el servidor hola');
+                console.error('Error:', error);
+                alert('Error al conectar con el servidor');
             }
         }
 
-        // Manejo del formulario de registro
+        // Updated handleRegister function with correct API path
         async function handleRegister(e) {
             e.preventDefault();
             const formData = new FormData(e.target);
@@ -266,7 +267,7 @@ session_start();
             };
 
             try {
-                const response = await fetch('../../Controlador/api/register.php', {
+                const response = await fetch('../../api/register.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -284,18 +285,20 @@ session_start();
                     alert(result.message || 'Error en el registro');
                 }
             } catch (error) {
+                console.error('Error:', error);
                 alert('Error al conectar con el servidor');
             }
         }
 
-        // Función de logout
+        // Updated logout function with correct API path
         async function logout() {
             try {
-                const response = await fetch('../Controlador/api/logout.php');
+                const response = await fetch('../../api/logout.php');
                 if (response.ok) {
                     location.reload();
                 }
             } catch (error) {
+                console.error('Error:', error);
                 alert('Error al cerrar sesión');
             }
         }
